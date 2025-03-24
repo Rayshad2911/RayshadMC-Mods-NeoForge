@@ -67,6 +67,16 @@ public class RayshadMC {
 
         if(event.getTabKey() == CreativeModeTabs.COMBAT) {
             event.accept(ModItems.KROIPNITE_SWORD);
+
+            event.accept(ModItems.KROIPNITE_HELMET);
+            event.accept(ModItems.KROIPNITE_CHESTPLATE);
+            event.accept(ModItems.KROIPNITE_LEGGINGS);
+            event.accept(ModItems.KROIPNITE_BOOTS);
+        }
+
+        if(event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
+            event.accept(ModItems.CORN);
+            event.accept(ModItems.MASHED_POTATO);
         }
     }
 

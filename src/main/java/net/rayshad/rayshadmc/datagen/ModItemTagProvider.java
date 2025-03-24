@@ -30,5 +30,11 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModItems.KROIPNITE_AXE.get());
         tag(ItemTags.HOES)
                 .add(ModItems.KROIPNITE_HOE.get());
+
+        tag(ItemTags.TRIMMABLE_ARMOR)
+                .add(ModItems.KROIPNITE_HELMET.get())
+                .add(ModItems.KROIPNITE_CHESTPLATE.get())
+                .add(ModItems.KROIPNITE_LEGGINGS.get())
+                .add(ModItems.KROIPNITE_BOOTS.get());
     }
 }

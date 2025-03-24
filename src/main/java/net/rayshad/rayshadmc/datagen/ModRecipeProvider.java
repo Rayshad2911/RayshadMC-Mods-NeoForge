@@ -3,6 +3,7 @@ package net.rayshad.rayshadmc.datagen;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
@@ -30,6 +31,41 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .define('A', ModItems.KROIPNITE_INGOT.get())
                 .unlockedBy(getHasName(ModItems.KROIPNITE_INGOT.get()), has(ModItems.KROIPNITE_INGOT.get())).save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.KROIPNITE_SWORD.get())
+                .pattern("A")
+                .pattern("A")
+                .pattern("B")
+                .define('A', ModItems.KROIPNITE_INGOT.get())
+                .define('B', Items.STICK)
+                .unlockedBy(getHasName(ModItems.KROIPNITE_INGOT.get()), has(ModItems.KROIPNITE_INGOT.get())).save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.KROIPNITE_SHOVEL.get())
+                .pattern("A")
+                .pattern("B")
+                .pattern("B")
+                .define('A', ModItems.KROIPNITE_INGOT.get())
+                .define('B', Items.STICK)
+                .unlockedBy(getHasName(ModItems.KROIPNITE_INGOT.get()), has(ModItems.KROIPNITE_INGOT.get())).save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.KROIPNITE_PICKAXE.get())
+                .pattern("AAA")
+                .pattern(" B ")
+                .pattern(" B ")
+                .define('A', ModItems.KROIPNITE_INGOT.get())
+                .define('B', Items.STICK)
+                .unlockedBy(getHasName(ModItems.KROIPNITE_INGOT.get()), has(ModItems.KROIPNITE_INGOT.get())).save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.KROIPNITE_AXE.get())
+                .pattern("AA ")
+                .pattern("AB ")
+                .pattern(" B ")
+                .define('A', ModItems.KROIPNITE_INGOT.get())
+                .define('B', Items.STICK)
+                .unlockedBy(getHasName(ModItems.KROIPNITE_INGOT.get()), has(ModItems.KROIPNITE_INGOT.get())).save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.KROIPNITE_HOE.get())
+                .pattern("AA ")
+                .pattern(" B ")
+                .pattern(" B ")
+                .define('A', ModItems.KROIPNITE_INGOT.get())
+                .define('B', Items.STICK)
+                .unlockedBy(getHasName(ModItems.KROIPNITE_INGOT.get()), has(ModItems.KROIPNITE_INGOT.get())).save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.OPYX_ROCK.get())
                 .pattern("AA")
                 .pattern("AA")
@@ -51,6 +87,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.KROIPNITE_INGOT.get(), 9)
                 .requires(ModBlocks.KROIPNITE_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.KROIPNITE_BLOCK.get()), has(ModBlocks.KROIPNITE_BLOCK.get())).save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.MASHED_POTATO.get())
+                .requires(Items.BOWL)
+                .requires(Items.MILK_BUCKET)
+                .requires(Items.MILK_BUCKET)
+                .requires(Items.POTATO)
+                .unlockedBy(getHasName(Items.BOWL), has(Items.BOWL)).save(recipeOutput);
 
         oreSmelting(recipeOutput, KROIPNITE_INGOT_SMELTABLES, RecipeCategory.MISC, ModItems.KROIPNITE_INGOT.get(), 0.5f, 200, "kroipnite");
         oreBlasting(recipeOutput, KROIPNITE_INGOT_SMELTABLES, RecipeCategory.MISC, ModItems.KROIPNITE_INGOT.get(), 0.5f, 100, "kroipnite");

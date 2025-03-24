@@ -35,6 +35,19 @@ public class ModItems {
             () -> new HoeItem(ModToolTiers.KROIPNITE, new Item.Properties()
                     .attributes(HoeItem.createAttributes(ModToolTiers.KROIPNITE, -3.5f, 0))));
 
+    public static final DeferredItem<ArmorItem> KROIPNITE_HELMET = ITEMS.register("kroipnite_helmet",
+            () -> new ArmorItem(ModArmorMaterials.KROIPNITE_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
+                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(24))));
+    public static final DeferredItem<ArmorItem> KROIPNITE_CHESTPLATE = ITEMS.register("kroipnite_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.KROIPNITE_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(24))));
+    public static final DeferredItem<ArmorItem> KROIPNITE_LEGGINGS = ITEMS.register("kroipnite_leggings",
+            () -> new ArmorItem(ModArmorMaterials.KROIPNITE_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
+                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(24))));
+    public static final DeferredItem<ArmorItem> KROIPNITE_BOOTS = ITEMS.register("kroipnite_boots",
+            () -> new ArmorItem(ModArmorMaterials.KROIPNITE_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
+                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(24))));
+
     public static final DeferredItem<Item> CORN = ITEMS.register("corn",
             () -> new Item(new Item.Properties().food(ModFoodProperties.CORN)));
     public static final DeferredItem<Item> MASHED_POTATO = ITEMS.register("mashed_potato",
