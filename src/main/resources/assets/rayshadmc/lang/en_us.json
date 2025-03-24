@@ -5,6 +5,9 @@
   "item.rayshadmc.opyx_rock": "Opyx Rock",
 
   "block.rayshadmc.kroipnite_block": "Block of Kroipnite",
+  "block.rayshadmc.kroipnite_ore": "Kroipnite Ore",
+  "block.rayshadmc.deepslate_kroipnite_ore": "Deepslate Kroipnite Ore",
+  "block.rayshadmc.opyx_soil": "Opyx Soil",
   "block.rayshadmc.opyx_block": "Block of Opyx",
   "block.rayshadmc.opyx_hardened_block": "Hardened Opyx Block"
 }
