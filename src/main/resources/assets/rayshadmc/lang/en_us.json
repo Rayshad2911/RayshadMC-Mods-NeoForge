@@ -1,8 +1,15 @@
 {
   "item.rayshadmc.kroipnite": "Kroipnite",
   "item.rayshadmc.kroipnite_ingot": "Kroipnite Ingot",
+  "item.rayshadmc.kroipnite_sword": "Kroipnite Sword",
+  "item.rayshadmc.kroipnite_shovel": "Kroipnite Shovel",
+  "item.rayshadmc.kroipnite_pickaxe": "Kroipnite Pickaxe",
+  "item.rayshadmc.kroipnite_axe": "Kroipnite Axe",
+  "item.rayshadmc.kroipnite_hoe": "Kroipnite Hoe",
   "item.rayshadmc.opyx_shard": "Opyx Shard",
   "item.rayshadmc.opyx_rock": "Opyx Rock",
+  "item.rayshadmc.corn": "Corn",
+  "item.rayshadmc.mashed_potato": "Mashed Potato",
 
   "block.rayshadmc.kroipnite_block": "Block of Kroipnite",
   "block.rayshadmc.kroipnite_ore": "Kroipnite Ore",

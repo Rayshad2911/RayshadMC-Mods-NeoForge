@@ -3,10 +3,12 @@ package net.rayshad.rayshadmc.datagen;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.rayshad.rayshadmc.RayshadMC;
 import net.rayshad.rayshadmc.block.ModBlocks;
+import net.rayshad.rayshadmc.util.ModTags;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
@@ -45,5 +47,12 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         tag(BlockTags.SOUL_SPEED_BLOCKS)
                 .add(ModBlocks.OPYX_SOIL.get());
+
+        tag(ModTags.Blocks.NEEDS_KROIPNITE_TOOL)
+                .addTag(BlockTags.NEEDS_DIAMOND_TOOL);
+
+        tag(ModTags.Blocks.INCORRECT_FOR_KROIPNITE_TOOL)
+                .addTag(BlockTags.INCORRECT_FOR_DIAMOND_TOOL)
+                .remove(ModTags.Blocks.NEEDS_KROIPNITE_TOOL);
     }
 }

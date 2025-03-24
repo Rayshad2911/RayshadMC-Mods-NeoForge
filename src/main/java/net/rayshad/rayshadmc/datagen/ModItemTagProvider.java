@@ -3,9 +3,11 @@ package net.rayshad.rayshadmc.datagen;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.rayshad.rayshadmc.RayshadMC;
+import net.rayshad.rayshadmc.item.ModItems;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
@@ -18,6 +20,15 @@ public class ModItemTagProvider extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
-
+        tag(ItemTags.SWORDS)
+                .add(ModItems.KROIPNITE_SWORD.get());
+        tag(ItemTags.PICKAXES)
+                .add(ModItems.KROIPNITE_PICKAXE.get());
+        tag(ItemTags.SHOVELS)
+                .add(ModItems.KROIPNITE_SHOVEL.get());
+        tag(ItemTags.AXES)
+                .add(ModItems.KROIPNITE_AXE.get());
+        tag(ItemTags.HOES)
+                .add(ModItems.KROIPNITE_HOE.get());
     }
 }
