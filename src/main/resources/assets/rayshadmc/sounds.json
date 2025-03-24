@@ -1,0 +1,18 @@
+{
+  "fun_random": {
+    "sounds": [
+      {
+        "name": "rayshadmc:fun_random",
+        "stream": "true"
+      }
+    ]
+  },
+  "playing_arcade_game": {
+    "sounds": [
+      {
+        "name": "rayshadmc:playing_arcade_game",
+        "stream": "true"
+      }
+    ]
+  }
+}

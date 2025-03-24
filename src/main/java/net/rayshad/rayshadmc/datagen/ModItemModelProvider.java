@@ -47,6 +47,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.CORN.get());
         basicItem(ModItems.MASHED_POTATO.get());
 
+        basicItem(ModItems.MUSIC_DISC_FUN_RANDOM.get());
+        basicItem(ModItems.MUSIC_DISC_PLAYING_ARCADE_GAME.get());
+
+        basicItem(ModItems.ZOMBIE_EYE.get());
+
         handheldItem(ModItems.KROIPNITE_SWORD);
         handheldItem(ModItems.KROIPNITE_SHOVEL);
         handheldItem(ModItems.KROIPNITE_PICKAXE);

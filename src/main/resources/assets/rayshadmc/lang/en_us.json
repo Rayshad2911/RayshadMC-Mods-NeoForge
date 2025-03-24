@@ -15,10 +15,21 @@
   "item.rayshadmc.corn": "Corn",
   "item.rayshadmc.mashed_potato": "Mashed Potato",
 
+  "item.rayshadmc.music_disc_fun_random": "Music Disc",
+  "item.rayshadmc.music_disc_fun_random.desc": "GTA Band - Fun Random",
+  "item.rayshadmc.music_disc_playing_arcade_game": "Music Disc",
+  "item.rayshadmc.music_disc_playing_arcade_game.desc": "GTA Band - Playing 'Arcade' Game",
+
+  "item.minecraft.potion.effect.decay_health": "Potion of Decay Health",
+  "item.minecraft.splash_potion.effect.decay_health": "Splash Potion of Decay Health",
+  "item.minecraft.lingering_potion.effect.decay_health": "Lingering Potion of Decay Health",
+
   "block.rayshadmc.kroipnite_block": "Block of Kroipnite",
   "block.rayshadmc.kroipnite_ore": "Kroipnite Ore",
   "block.rayshadmc.deepslate_kroipnite_ore": "Deepslate Kroipnite Ore",
   "block.rayshadmc.opyx_soil": "Opyx Soil",
   "block.rayshadmc.opyx_block": "Block of Opyx",
-  "block.rayshadmc.opyx_hardened_block": "Hardened Opyx Block"
+  "block.rayshadmc.opyx_hardened_block": "Hardened Opyx Block",
+
+  "effect.rayshadmc.decay": "Decay"
 }

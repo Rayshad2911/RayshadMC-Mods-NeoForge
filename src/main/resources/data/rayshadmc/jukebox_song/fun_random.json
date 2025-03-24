@@ -1,0 +1,8 @@
+{
+  "comparator_output": 15,
+  "description": {
+    "translate": "item.rayshadmc.music_disc_fun_random.desc"
+  },
+  "length_in_seconds": 93,
+  "sound_event": "rayshadmc:fun_random"
+}

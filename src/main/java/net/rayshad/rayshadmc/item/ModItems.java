@@ -5,6 +5,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.rayshad.rayshadmc.RayshadMC;
+import net.rayshad.rayshadmc.sound.ModSounds;
 
 public class ModItems {
     public static final DeferredRegister.Items ITEMS =
@@ -52,6 +53,14 @@ public class ModItems {
             () -> new Item(new Item.Properties().food(ModFoodProperties.CORN)));
     public static final DeferredItem<Item> MASHED_POTATO = ITEMS.register("mashed_potato",
             () -> new Item(new Item.Properties().food(ModFoodProperties.MASHED_POTATO)));
+
+    public static final DeferredItem<Item> MUSIC_DISC_FUN_RANDOM = ITEMS.register("music_disc_fun_random",
+            () -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.FUN_RANDOM_KEY).stacksTo(1)));
+    public static final DeferredItem<Item> MUSIC_DISC_PLAYING_ARCADE_GAME = ITEMS.register("music_disc_playing_arcade_game",
+            () -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.PLAYING_ARCADE_GAME_KEY).stacksTo(1)));
+
+    public static final DeferredItem<Item> ZOMBIE_EYE = ITEMS.register("zombie_eye",
+            () -> new Item(new Item.Properties().stacksTo(16)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

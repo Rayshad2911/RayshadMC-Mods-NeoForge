@@ -1,0 +1,8 @@
+{
+  "comparator_output": 15,
+  "description": {
+    "translate": "item.rayshadmc.music_disc_playing_arcade_game.desc"
+  },
+  "length_in_seconds": 55,
+  "sound_event": "rayshadmc:playing_arcade_game"
+}

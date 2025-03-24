@@ -15,7 +15,10 @@ import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import net.rayshad.rayshadmc.block.ModBlocks;
+import net.rayshad.rayshadmc.effect.ModEffects;
 import net.rayshad.rayshadmc.item.ModItems;
+import net.rayshad.rayshadmc.potion.ModPotions;
+import net.rayshad.rayshadmc.sound.ModSounds;
 import org.slf4j.Logger;
 
 @Mod(RayshadMC.MOD_ID)
@@ -28,7 +31,10 @@ public class RayshadMC {
         NeoForge.EVENT_BUS.register(this);
 
         ModBlocks.register(modEventBus);
+        ModEffects.register(modEventBus);
         ModItems.register(modEventBus);
+        ModPotions.register(modEventBus);
+        ModSounds.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
@@ -44,6 +50,7 @@ public class RayshadMC {
             event.accept(ModItems.OPYX_SHARD);
             event.accept(ModItems.KROIPNITE_INGOT);
             event.accept(ModItems.OPYX_ROCK);
+            event.accept(ModItems.ZOMBIE_EYE);
         }
 
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
@@ -63,6 +70,9 @@ public class RayshadMC {
             event.accept(ModItems.KROIPNITE_PICKAXE);
             event.accept(ModItems.KROIPNITE_AXE);
             event.accept(ModItems.KROIPNITE_HOE);
+
+            event.accept(ModItems.MUSIC_DISC_FUN_RANDOM);
+            event.accept(ModItems.MUSIC_DISC_PLAYING_ARCADE_GAME);
         }
 
         if(event.getTabKey() == CreativeModeTabs.COMBAT) {
