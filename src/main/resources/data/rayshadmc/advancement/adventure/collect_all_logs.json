@@ -1,0 +1,73 @@
+{
+  "parent": "minecraft:adventure/adventuring_time",
+  "criteria": {
+    "all_logs": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:oak_log"
+          },
+          {
+            "items": "minecraft:spruce_log"
+          },
+          {
+            "items": "minecraft:birch_log"
+          },
+          {
+            "items": "minecraft:jungle_log"
+          },
+          {
+            "items": "minecraft:acacia_log"
+          },
+          {
+            "items": "minecraft:dark_oak_log"
+          },
+          {
+            "items": "minecraft:mangrove_log"
+          },
+          {
+            "items": "minecraft:cherry_log"
+          },
+          {
+            "items": "rayshadmc:maple_log"
+          },
+          {
+            "items": "minecraft:crimson_stem"
+          },
+          {
+            "items": "minecraft:warped_stem"
+          },
+          {
+            "items": "rayshadmc:chorus_stem"
+          },
+          {
+            "items": "rayshadmc:pale_chorus_stem"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.adventure.collect_all_logs.description"
+    },
+    "frame": "challenge",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:iron_axe"
+    },
+    "title": {
+      "translate": "advancements.adventure.collect_all_logs.title"
+    }
+  },
+  "requirements": [
+    [
+      "all_logs"
+    ]
+  ],
+  "rewards": {
+    "experience": 90
+  },
+  "sends_telemetry_event": true
+}

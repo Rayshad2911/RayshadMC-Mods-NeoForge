@@ -1,0 +1,44 @@
+{
+  "parent": "minecraft:adventure/kill_a_mob",
+  "criteria": {
+    "creeper": {
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:creeper"
+            }
+          }
+        ],
+        "player": {
+          "equipment": {
+            "mainhand": {
+              "items": "rayshadmc:amethyst_grenade"
+            }
+          }
+        }
+      },
+      "trigger": "minecraft:player_killed_entity"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.adventure.explosion_vs_explosion.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "rayshadmc:amethyst_grenade"
+    },
+    "title": {
+      "translate": "advancements.adventure.explosion_vs_explosion.title"
+    }
+  },
+  "requirements": [
+    [
+      "creeper"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

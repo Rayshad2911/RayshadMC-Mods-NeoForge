@@ -5,6 +5,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.rayshad.rayshadmc.RayshadMC;
+import net.rayshad.rayshadmc.block.ModBlocks;
 import net.rayshad.rayshadmc.sound.ModSounds;
 
 public class ModItems {
@@ -49,6 +50,8 @@ public class ModItems {
             () -> new ArmorItem(ModArmorMaterials.KROIPNITE_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
                     new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(24))));
 
+    public static final DeferredItem<Item> CORN_SEEDS = ITEMS.register("corn_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.CORN_CROP.get(), new Item.Properties()));
     public static final DeferredItem<Item> CORN = ITEMS.register("corn",
             () -> new Item(new Item.Properties().food(ModFoodProperties.CORN)));
     public static final DeferredItem<Item> MASHED_POTATO = ITEMS.register("mashed_potato",

@@ -44,6 +44,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.KROIPNITE_INGOT.get());
         basicItem(ModItems.OPYX_ROCK.get());
 
+        basicItem(ModItems.CORN_SEEDS.get());
         basicItem(ModItems.CORN.get());
         basicItem(ModItems.MASHED_POTATO.get());
 

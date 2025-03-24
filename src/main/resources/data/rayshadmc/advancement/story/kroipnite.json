@@ -1,0 +1,33 @@
+{
+  "parent": "minecraft:story/mine_diamond",
+  "criteria": {
+    "kroipnite": {
+      "conditions": {
+        "items": [
+          {
+            "items": "rayshadmc:kroipnite_ingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.story.kroipnite.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "rayshadmc:kroipnite_ingot"
+    },
+    "title": {
+      "translate": "advancements.story.kroipnite.title"
+    }
+  },
+  "requirements": [
+    [
+      "kroipnite"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

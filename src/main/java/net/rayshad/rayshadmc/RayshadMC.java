@@ -63,6 +63,7 @@ public class RayshadMC {
             event.accept(ModBlocks.KROIPNITE_ORE);
             event.accept(ModBlocks.DEEPSLATE_KROIPNITE_ORE);
             event.accept(ModBlocks.OPYX_SOIL);
+            event.accept(ModItems.CORN_SEEDS);
         }
 
         if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {

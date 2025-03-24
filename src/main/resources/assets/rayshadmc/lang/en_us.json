@@ -12,8 +12,10 @@
   "item.rayshadmc.kroipnite_boots": "Kroipnite Boots",
   "item.rayshadmc.opyx_shard": "Opyx Shard",
   "item.rayshadmc.opyx_rock": "Opyx Rock",
+  "item.rayshadmc.corn_seeds": "Corn Seeds",
   "item.rayshadmc.corn": "Corn",
   "item.rayshadmc.mashed_potato": "Mashed Potato",
+  "item.rayshadmc.zombie_eye": "Zombie Eye",
 
   "item.rayshadmc.music_disc_fun_random": "Music Disc",
   "item.rayshadmc.music_disc_fun_random.desc": "GTA Band - Fun Random",
@@ -30,6 +32,14 @@
   "block.rayshadmc.opyx_soil": "Opyx Soil",
   "block.rayshadmc.opyx_block": "Block of Opyx",
   "block.rayshadmc.opyx_hardened_block": "Hardened Opyx Block",
+  "block.rayshadmc.corn_crop": "Corn Crop",
 
-  "effect.rayshadmc.decay": "Decay"
+  "effect.rayshadmc.decay": "Decay",
+
+  "advancements.story.kroipnite.title": "Uhh... Kroipnite?",
+  "advancements.story.kroipnite.description": "Mine a Kroipnite Ore and smelt it",
+  "advancements.adventure.collect_all_logs.title": "Around the Wood",
+  "advancements.adventure.collect_all_logs.description": "Collect all log types around the world",
+  "advancements.adventure.explosion_vs_explosion.title": "Explosion Battle",
+  "advancements.adventure.explosion_vs_explosion.description": "Creeper can explode, so can I. Use eco-friendly explosives to defeat a Creeper"
 }
