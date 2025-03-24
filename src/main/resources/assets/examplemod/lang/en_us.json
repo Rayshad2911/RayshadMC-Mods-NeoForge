@@ -1,5 +1,10 @@
 {
-  "itemGroup.examplemod": "Example Mod Tab",
-  "block.examplemod.example_block": "Example Block",
-  "item.examplemod.example_item": "Example Item"
+  "item.rayshadmc.kroipnite": "Kroipnite",
+  "item.rayshadmc.kroipnite_ingot": "Kroipnite Ingot",
+  "item.rayshadmc.opyx_shard": "Opyx Shard",
+  "item.rayshadmc.opyx_rock": "Opyx Rock",
+
+  "block.rayshadmc.kroipnite_block": "Block of Kroipnite",
+  "block.rayshadmc.opyx_block": "Block of Opyx",
+  "block.rayshadmc.opyx_hardened_block": "Hardened Opyx Block"
 }

@@ -1,6 +1,7 @@
 package net.rayshad.rayshadmc;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -13,6 +14,8 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
+import net.rayshad.rayshadmc.block.ModBlocks;
+import net.rayshad.rayshadmc.item.ModItems;
 import org.slf4j.Logger;
 
 @Mod(RayshadMC.MOD_ID)
@@ -24,6 +27,9 @@ public class RayshadMC {
         modEventBus.addListener(this::commonSetup);
         NeoForge.EVENT_BUS.register(this);
 
+        ModBlocks.register(modEventBus);
+        ModItems.register(modEventBus);
+
         modEventBus.addListener(this::addCreative);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
@@ -33,7 +39,24 @@ public class RayshadMC {
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.KROIPNITE);
+            event.accept(ModItems.OPYX_SHARD);
+            event.accept(ModItems.KROIPNITE_INGOT);
+            event.accept(ModItems.OPYX_ROCK);
+        }
 
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.KROIPNITE_BLOCK);
+            event.accept(ModBlocks.OPYX_BLOCK);
+            event.accept(ModBlocks.OPYX_HARDENED_BLOCK);
+        }
+
+        if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
+            event.accept(ModBlocks.KROIPNITE_ORE);
+            event.accept(ModBlocks.DEEPSLATE_KROIPNITE_ORE);
+            event.accept(ModBlocks.OPYX_SOIL);
+        }
     }
 
     @SubscribeEvent
