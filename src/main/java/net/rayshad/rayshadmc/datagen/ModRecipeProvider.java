@@ -96,6 +96,56 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         oreSmelting(recipeOutput, KROIPNITE_INGOT_SMELTABLES, RecipeCategory.MISC, ModItems.KROIPNITE_INGOT.get(), 0.5f, 200, "kroipnite");
         oreBlasting(recipeOutput, KROIPNITE_INGOT_SMELTABLES, RecipeCategory.MISC, ModItems.KROIPNITE_INGOT.get(), 0.5f, 100, "kroipnite");
+
+        stairBuilder(ModBlocks.MAPLE_STAIRS.get(), Ingredient.of(ModBlocks.MAPLE_PLANKS)).group("wooden_stairs")
+                .unlockedBy("has_maple_planks", has(ModBlocks.MAPLE_PLANKS)).save(recipeOutput);
+        stairBuilder(ModBlocks.CHORUS_STAIRS.get(), Ingredient.of(ModBlocks.CHORUS_PLANKS)).group("wooden_stairs")
+                .unlockedBy("has_chorus_planks", has(ModBlocks.CHORUS_PLANKS)).save(recipeOutput);
+        stairBuilder(ModBlocks.PALE_CHORUS_STAIRS.get(), Ingredient.of(ModBlocks.PALE_CHORUS_PLANKS)).group("wooden_stairs")
+                .unlockedBy("has_pale_chorus_planks", has(ModBlocks.PALE_CHORUS_PLANKS)).save(recipeOutput);
+
+        slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAPLE_SLAB.get(), ModBlocks.MAPLE_PLANKS.get());
+        slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHORUS_SLAB.get(), ModBlocks.CHORUS_PLANKS.get());
+        slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.PALE_CHORUS_SLAB.get(), ModBlocks.PALE_CHORUS_PLANKS.get());
+
+        buttonBuilder(ModBlocks.MAPLE_BUTTON.get(), Ingredient.of(ModBlocks.MAPLE_PLANKS.get())).group("wooden_button")
+                .unlockedBy("has_maple_planks", has(ModBlocks.MAPLE_PLANKS)).save(recipeOutput);
+        buttonBuilder(ModBlocks.CHORUS_BUTTON.get(), Ingredient.of(ModBlocks.CHORUS_PLANKS.get())).group("wooden_button")
+                .unlockedBy("has_chorus_planks", has(ModBlocks.CHORUS_PLANKS)).save(recipeOutput);
+        buttonBuilder(ModBlocks.PALE_CHORUS_BUTTON.get(), Ingredient.of(ModBlocks.PALE_CHORUS_PLANKS.get())).group("wooden_button")
+                .unlockedBy("has_pale_chorus_planks", has(ModBlocks.PALE_CHORUS_PLANKS)).save(recipeOutput);
+
+        pressurePlate(recipeOutput, ModBlocks.MAPLE_PRESSURE_PLATE.get(), ModBlocks.MAPLE_PLANKS.get());
+        pressurePlate(recipeOutput, ModBlocks.CHORUS_PRESSURE_PLATE.get(), ModBlocks.CHORUS_PLANKS.get());
+        pressurePlate(recipeOutput, ModBlocks.PALE_CHORUS_PRESSURE_PLATE.get(), ModBlocks.PALE_CHORUS_PLANKS.get());
+
+        fenceBuilder(ModBlocks.MAPLE_FENCE.get(), Ingredient.of(ModBlocks.MAPLE_PLANKS.get())).group("wooden_fence")
+                .unlockedBy("has_maple_planks", has(ModBlocks.MAPLE_PLANKS)).save(recipeOutput);
+        fenceBuilder(ModBlocks.CHORUS_FENCE.get(), Ingredient.of(ModBlocks.CHORUS_PLANKS.get())).group("wooden_fence")
+                .unlockedBy("has_chorus_planks", has(ModBlocks.CHORUS_PLANKS)).save(recipeOutput);
+        fenceBuilder(ModBlocks.PALE_CHORUS_FENCE.get(), Ingredient.of(ModBlocks.PALE_CHORUS_PLANKS.get())).group("wooden_fence")
+                .unlockedBy("has_pale_chorus_planks", has(ModBlocks.PALE_CHORUS_PLANKS)).save(recipeOutput);
+
+        fenceGateBuilder(ModBlocks.MAPLE_FENCE_GATE.get(), Ingredient.of(ModBlocks.MAPLE_PLANKS.get())).group("fence_gate")
+                .unlockedBy("has_maple_planks", has(ModBlocks.MAPLE_PLANKS)).save(recipeOutput);
+        fenceGateBuilder(ModBlocks.CHORUS_FENCE_GATE.get(), Ingredient.of(ModBlocks.CHORUS_PLANKS.get())).group("fence_gate")
+                .unlockedBy("has_chorus_planks", has(ModBlocks.CHORUS_PLANKS)).save(recipeOutput);
+        fenceGateBuilder(ModBlocks.PALE_CHORUS_FENCE_GATE.get(), Ingredient.of(ModBlocks.PALE_CHORUS_PLANKS.get())).group("fence_gate")
+                .unlockedBy("has_pale_chorus_planks", has(ModBlocks.PALE_CHORUS_PLANKS)).save(recipeOutput);
+
+        doorBuilder(ModBlocks.MAPLE_DOOR.get(), Ingredient.of(ModBlocks.MAPLE_PLANKS.get())).group("wooden_door")
+                .unlockedBy("has_maple_planks", has(ModBlocks.MAPLE_PLANKS)).save(recipeOutput);
+        doorBuilder(ModBlocks.CHORUS_DOOR.get(), Ingredient.of(ModBlocks.CHORUS_PLANKS.get())).group("wooden_door")
+                .unlockedBy("has_chorus_planks", has(ModBlocks.CHORUS_PLANKS)).save(recipeOutput);
+        doorBuilder(ModBlocks.PALE_CHORUS_DOOR.get(), Ingredient.of(ModBlocks.PALE_CHORUS_PLANKS.get())).group("wooden_door")
+                .unlockedBy("has_pale_chorus_planks", has(ModBlocks.PALE_CHORUS_PLANKS)).save(recipeOutput);
+
+        trapdoorBuilder(ModBlocks.MAPLE_TRAPDOOR.get(), Ingredient.of(ModBlocks.MAPLE_PLANKS.get())).group("wooden_trapdoor")
+                .unlockedBy("has_maple_planks", has(ModBlocks.MAPLE_PLANKS)).save(recipeOutput);
+        trapdoorBuilder(ModBlocks.CHORUS_TRAPDOOR.get(), Ingredient.of(ModBlocks.CHORUS_PLANKS.get())).group("wooden_trapdoor")
+                .unlockedBy("has_chorus_planks", has(ModBlocks.CHORUS_PLANKS)).save(recipeOutput);
+        trapdoorBuilder(ModBlocks.PALE_CHORUS_TRAPDOOR.get(), Ingredient.of(ModBlocks.PALE_CHORUS_PLANKS.get())).group("wooden_trapdoor")
+                .unlockedBy("has_pale_chorus_planks",has(ModBlocks.PALE_CHORUS_PLANKS)).save(recipeOutput);
     }
 
     protected static void oreSmelting(RecipeOutput recipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,

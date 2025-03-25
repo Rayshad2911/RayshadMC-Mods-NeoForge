@@ -62,6 +62,54 @@ public class ModBlockStateProvider extends BlockStateProvider {
         saplingBlock(ModBlocks.MAPLE_SAPLING);
         saplingBlock(ModBlocks.CHORUS_TREE_SEED);
         saplingBlock(ModBlocks.PALE_CHORUS_TREE_SEED);
+
+        stairsBlock(ModBlocks.MAPLE_STAIRS.get(), blockTexture(ModBlocks.MAPLE_PLANKS.get()));
+        stairsBlock(ModBlocks.CHORUS_STAIRS.get(), blockTexture(ModBlocks.CHORUS_PLANKS.get()));
+        stairsBlock(ModBlocks.PALE_CHORUS_STAIRS.get(), blockTexture(ModBlocks.PALE_CHORUS_PLANKS.get()));
+
+        slabBlock(ModBlocks.MAPLE_SLAB.get(), blockTexture(ModBlocks.MAPLE_PLANKS.get()), blockTexture(ModBlocks.MAPLE_PLANKS.get()));
+        slabBlock(ModBlocks.CHORUS_SLAB.get(), blockTexture(ModBlocks.CHORUS_PLANKS.get()), blockTexture(ModBlocks.CHORUS_PLANKS.get()));
+        slabBlock(ModBlocks.PALE_CHORUS_SLAB.get(), blockTexture(ModBlocks.PALE_CHORUS_PLANKS.get()), blockTexture(ModBlocks.PALE_CHORUS_PLANKS.get()));
+
+        buttonBlock(ModBlocks.MAPLE_BUTTON.get(), blockTexture(ModBlocks.MAPLE_PLANKS.get()));
+        buttonBlock(ModBlocks.CHORUS_BUTTON.get(), blockTexture(ModBlocks.CHORUS_PLANKS.get()));
+        buttonBlock(ModBlocks.PALE_CHORUS_BUTTON.get(), blockTexture(ModBlocks.PALE_CHORUS_PLANKS.get()));
+
+        pressurePlateBlock(ModBlocks.MAPLE_PRESSURE_PLATE.get(), blockTexture(ModBlocks.MAPLE_PLANKS.get()));
+        pressurePlateBlock(ModBlocks.CHORUS_PRESSURE_PLATE.get(), blockTexture(ModBlocks.CHORUS_PLANKS.get()));
+        pressurePlateBlock(ModBlocks.PALE_CHORUS_PRESSURE_PLATE.get(), blockTexture(ModBlocks.PALE_CHORUS_PLANKS.get()));
+
+        fenceBlock(ModBlocks.MAPLE_FENCE.get(), blockTexture(ModBlocks.MAPLE_PLANKS.get()));
+        fenceBlock(ModBlocks.CHORUS_FENCE.get(), blockTexture(ModBlocks.CHORUS_PLANKS.get()));
+        fenceBlock(ModBlocks.PALE_CHORUS_FENCE.get(), blockTexture(ModBlocks.PALE_CHORUS_PLANKS.get()));
+
+        fenceGateBlock(ModBlocks.MAPLE_FENCE_GATE.get(), blockTexture(ModBlocks.MAPLE_PLANKS.get()));
+        fenceGateBlock(ModBlocks.CHORUS_FENCE_GATE.get(), blockTexture(ModBlocks.CHORUS_PLANKS.get()));
+        fenceGateBlock(ModBlocks.PALE_CHORUS_FENCE_GATE.get(), blockTexture(ModBlocks.PALE_CHORUS_PLANKS.get()));
+
+        doorBlockWithRenderType(ModBlocks.MAPLE_DOOR.get(), modLoc("block/maple_door_bottom"), modLoc("block/maple_door_top"), "cutout");
+        doorBlockWithRenderType(ModBlocks.CHORUS_DOOR.get(), modLoc("block/chorus_door_bottom"), modLoc("block/chorus_door_top"), "cutout");
+        doorBlockWithRenderType(ModBlocks.PALE_CHORUS_DOOR.get(), modLoc("block/pale_chorus_door_bottom"), modLoc("block/pale_chorus_door_top"), "cutout");
+
+        trapdoorBlockWithRenderType(ModBlocks.MAPLE_TRAPDOOR.get(), modLoc("block/maple_trapdoor"), true, "cutout");
+        trapdoorBlockWithRenderType(ModBlocks.CHORUS_TRAPDOOR.get(), modLoc("block/chorus_trapdoor"), true, "cutout");
+        trapdoorBlockWithRenderType(ModBlocks.PALE_CHORUS_TRAPDOOR.get(), modLoc("block/pale_chorus_trapdoor"), true, "cutout");
+
+        blockItem(ModBlocks.MAPLE_STAIRS);
+        blockItem(ModBlocks.MAPLE_SLAB);
+        blockItem(ModBlocks.MAPLE_PRESSURE_PLATE);
+        blockItem(ModBlocks.MAPLE_FENCE_GATE);
+        blockItem(ModBlocks.MAPLE_TRAPDOOR, "_bottom");
+        blockItem(ModBlocks.CHORUS_STAIRS);
+        blockItem(ModBlocks.CHORUS_SLAB);
+        blockItem(ModBlocks.CHORUS_PRESSURE_PLATE);
+        blockItem(ModBlocks.CHORUS_FENCE_GATE);
+        blockItem(ModBlocks.CHORUS_TRAPDOOR, "_bottom");
+        blockItem(ModBlocks.PALE_CHORUS_STAIRS);
+        blockItem(ModBlocks.PALE_CHORUS_SLAB);
+        blockItem(ModBlocks.PALE_CHORUS_PRESSURE_PLATE);
+        blockItem(ModBlocks.PALE_CHORUS_FENCE_GATE);
+        blockItem(ModBlocks.PALE_CHORUS_TRAPDOOR, "_bottom");
     }
 
     private void saplingBlock(DeferredBlock<Block> blockRegistryObject) {
@@ -94,10 +142,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
     }
 
     private void blockItem(DeferredBlock<?> deferredBlock) {
-        simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile("tutorialmod:block/" + deferredBlock.getId().getPath()));
+        simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile("rayshadmc:block/" + deferredBlock.getId().getPath()));
     }
 
     private void blockItem(DeferredBlock<?> deferredBlock, String appendix) {
-        simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile("tutorialmod:block/" + deferredBlock.getId().getPath() + appendix));
+        simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile("rayshadmc:block/" + deferredBlock.getId().getPath() + appendix));
     }
 }

@@ -70,6 +70,18 @@ public class ModItemModelProvider extends ItemModelProvider {
         saplingItem(ModBlocks.MAPLE_SAPLING);
         saplingItem(ModBlocks.CHORUS_TREE_SEED);
         saplingItem(ModBlocks.PALE_CHORUS_TREE_SEED);
+
+        buttonItem(ModBlocks.MAPLE_BUTTON, ModBlocks.MAPLE_PLANKS);
+        buttonItem(ModBlocks.CHORUS_BUTTON, ModBlocks.CHORUS_PLANKS);
+        buttonItem(ModBlocks.PALE_CHORUS_BUTTON, ModBlocks.PALE_CHORUS_PLANKS);
+        fenceItem(ModBlocks.MAPLE_FENCE, ModBlocks.MAPLE_PLANKS);
+        fenceItem(ModBlocks.CHORUS_FENCE, ModBlocks.CHORUS_PLANKS);
+        fenceItem(ModBlocks.PALE_CHORUS_FENCE, ModBlocks.PALE_CHORUS_PLANKS);
+        basicItem(ModBlocks.MAPLE_DOOR.asItem());
+        basicItem(ModBlocks.CHORUS_DOOR.asItem());
+        basicItem(ModBlocks.PALE_CHORUS_DOOR.asItem());
+
+        basicItem(ModItems.AMETHYST_GRENADE.asItem());
     }
 
     private ItemModelBuilder saplingItem(DeferredBlock<Block> item) {
@@ -123,5 +135,17 @@ public class ModItemModelProvider extends ItemModelProvider {
         return withExistingParent(item.getId().getPath(),
                 ResourceLocation.parse("item/handheld")).texture("layer0",
                 ResourceLocation.fromNamespaceAndPath(RayshadMC.MOD_ID, "item/" + item.getId().getPath()));
+    }
+
+    public void buttonItem(DeferredBlock<?> block, DeferredBlock<Block> baseBlock) {
+        this.withExistingParent(block.getId().getPath(), mcLoc("block/button_inventory"))
+                .texture("texture",  ResourceLocation.fromNamespaceAndPath(RayshadMC.MOD_ID,
+                        "block/" + baseBlock.getId().getPath()));
+    }
+
+    public void fenceItem(DeferredBlock<?> block, DeferredBlock<Block> baseBlock) {
+        this.withExistingParent(block.getId().getPath(), mcLoc("block/fence_inventory"))
+                .texture("texture",  ResourceLocation.fromNamespaceAndPath(RayshadMC.MOD_ID,
+                        "block/" + baseBlock.getId().getPath()));
     }
 }

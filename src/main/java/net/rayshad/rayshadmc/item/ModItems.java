@@ -6,6 +6,7 @@ import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.rayshad.rayshadmc.RayshadMC;
 import net.rayshad.rayshadmc.block.ModBlocks;
+import net.rayshad.rayshadmc.item.custom.AmethystGrenade;
 import net.rayshad.rayshadmc.sound.ModSounds;
 
 public class ModItems {
@@ -62,6 +63,8 @@ public class ModItems {
     public static final DeferredItem<Item> MUSIC_DISC_PLAYING_ARCADE_GAME = ITEMS.register("music_disc_playing_arcade_game",
             () -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.PLAYING_ARCADE_GAME_KEY).stacksTo(1)));
 
+    public static final DeferredItem<Item> AMETHYST_GRENADE = ITEMS.register("amethyst_grenade",
+            () -> new AmethystGrenade(new Item.Properties().stacksTo(16)));
     public static final DeferredItem<Item> ZOMBIE_EYE = ITEMS.register("zombie_eye",
             () -> new Item(new Item.Properties().stacksTo(16)));
 

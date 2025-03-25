@@ -67,6 +67,39 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
         this.add(ModBlocks.CHORUS_LEAVES.get(), block ->
                 createLeavesDrops(block, ModBlocks.PALE_CHORUS_TREE_SEED.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+
+        dropSelf(ModBlocks.MAPLE_STAIRS.get());
+        this.add(ModBlocks.MAPLE_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.MAPLE_SLAB.get()));
+        dropSelf(ModBlocks.MAPLE_FENCE.get());
+        dropSelf(ModBlocks.MAPLE_FENCE_GATE.get());
+        this.add(ModBlocks.MAPLE_DOOR.get(),
+                block -> createDoorTable(ModBlocks.MAPLE_DOOR.get()));
+        dropSelf(ModBlocks.MAPLE_TRAPDOOR.get());
+        dropSelf(ModBlocks.MAPLE_PRESSURE_PLATE.get());
+        dropSelf(ModBlocks.MAPLE_BUTTON.get());
+
+        dropSelf(ModBlocks.CHORUS_STAIRS.get());
+        add(ModBlocks.CHORUS_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.CHORUS_SLAB.get()));
+        dropSelf(ModBlocks.CHORUS_FENCE.get());
+        dropSelf(ModBlocks.CHORUS_FENCE_GATE.get());
+        add(ModBlocks.CHORUS_DOOR.get(),
+                block -> createDoorTable(ModBlocks.CHORUS_DOOR.get()));
+        dropSelf(ModBlocks.CHORUS_TRAPDOOR.get());
+        dropSelf(ModBlocks.CHORUS_PRESSURE_PLATE.get());
+        dropSelf(ModBlocks.CHORUS_BUTTON.get());
+
+        dropSelf(ModBlocks.PALE_CHORUS_STAIRS.get());
+        add(ModBlocks.PALE_CHORUS_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.PALE_CHORUS_SLAB.get()));
+        dropSelf(ModBlocks.PALE_CHORUS_FENCE.get());
+        dropSelf(ModBlocks.PALE_CHORUS_FENCE_GATE.get());
+        this.add(ModBlocks.PALE_CHORUS_DOOR.get(),
+                block -> createDoorTable(ModBlocks.PALE_CHORUS_DOOR.get()));
+        dropSelf(ModBlocks.PALE_CHORUS_TRAPDOOR.get());
+        dropSelf(ModBlocks.PALE_CHORUS_PRESSURE_PLATE.get());
+        dropSelf(ModBlocks.PALE_CHORUS_BUTTON.get());
     }
 
     protected LootTable.Builder createMultipleOreDrops(Block pBlock, Item item, float minDrops, float maxDrops) {

@@ -1,6 +1,8 @@
 package net.rayshad.rayshadmc;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
@@ -16,6 +18,7 @@ import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import net.rayshad.rayshadmc.block.ModBlocks;
 import net.rayshad.rayshadmc.effect.ModEffects;
+import net.rayshad.rayshadmc.entity.ModEntities;
 import net.rayshad.rayshadmc.item.ModItems;
 import net.rayshad.rayshadmc.potion.ModPotions;
 import net.rayshad.rayshadmc.sound.ModSounds;
@@ -32,6 +35,7 @@ public class RayshadMC {
 
         ModBlocks.register(modEventBus);
         ModEffects.register(modEventBus);
+        ModEntities.register(modEventBus);
         ModItems.register(modEventBus);
         ModPotions.register(modEventBus);
         ModSounds.register(modEventBus);
@@ -65,6 +69,30 @@ public class RayshadMC {
             event.accept(ModBlocks.MAPLE_PLANKS);
             event.accept(ModBlocks.CHORUS_PLANKS);
             event.accept(ModBlocks.PALE_CHORUS_PLANKS);
+            event.accept(ModBlocks.MAPLE_STAIRS);
+            event.accept(ModBlocks.CHORUS_STAIRS);
+            event.accept(ModBlocks.PALE_CHORUS_STAIRS);
+            event.accept(ModBlocks.MAPLE_SLAB);
+            event.accept(ModBlocks.CHORUS_SLAB);
+            event.accept(ModBlocks.PALE_CHORUS_SLAB);
+            event.accept(ModBlocks.MAPLE_FENCE);
+            event.accept(ModBlocks.CHORUS_FENCE);
+            event.accept(ModBlocks.PALE_CHORUS_FENCE);
+            event.accept(ModBlocks.MAPLE_FENCE_GATE);
+            event.accept(ModBlocks.CHORUS_FENCE_GATE);
+            event.accept(ModBlocks.PALE_CHORUS_FENCE_GATE);
+            event.accept(ModBlocks.MAPLE_DOOR);
+            event.accept(ModBlocks.CHORUS_DOOR);
+            event.accept(ModBlocks.PALE_CHORUS_DOOR);
+            event.accept(ModBlocks.MAPLE_TRAPDOOR);
+            event.accept(ModBlocks.CHORUS_TRAPDOOR);
+            event.accept(ModBlocks.PALE_CHORUS_TRAPDOOR);
+            event.accept(ModBlocks.MAPLE_PRESSURE_PLATE);
+            event.accept(ModBlocks.CHORUS_PRESSURE_PLATE);
+            event.accept(ModBlocks.PALE_CHORUS_PRESSURE_PLATE);
+            event.accept(ModBlocks.MAPLE_BUTTON);
+            event.accept(ModBlocks.CHORUS_BUTTON);
+            event.accept(ModBlocks.PALE_CHORUS_BUTTON);
             event.accept(ModBlocks.KROIPNITE_BLOCK);
             event.accept(ModBlocks.OPYX_BLOCK);
             event.accept(ModBlocks.OPYX_HARDENED_BLOCK);
@@ -101,6 +129,8 @@ public class RayshadMC {
             event.accept(ModItems.KROIPNITE_CHESTPLATE);
             event.accept(ModItems.KROIPNITE_LEGGINGS);
             event.accept(ModItems.KROIPNITE_BOOTS);
+
+            event.accept(ModItems.AMETHYST_GRENADE);
         }
 
         if(event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
@@ -118,7 +148,7 @@ public class RayshadMC {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-
+            EntityRenderers.register(ModEntities.AMETHYST_GRENADE.get(), ThrownItemRenderer::new);
         }
     }
 }

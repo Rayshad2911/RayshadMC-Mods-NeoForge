@@ -9,6 +9,8 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.WoodType;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -51,6 +53,24 @@ public class ModBlocks {
                     return 5;
                 }
             });
+    public static final DeferredBlock<StairBlock> MAPLE_STAIRS = registerBlock("maple_stairs",
+            () -> new StairBlock(ModBlocks.MAPLE_PLANKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.of().strength(2f)));
+    public static final DeferredBlock<SlabBlock> MAPLE_SLAB = registerBlock("maple_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of().strength(2f)));
+    public static final DeferredBlock<PressurePlateBlock> MAPLE_PRESSURE_PLATE = registerBlock("maple_pressure_plate",
+            () -> new PressurePlateBlock(BlockSetType.OAK, BlockBehaviour.Properties.of().strength(0.5f)));
+    public static final DeferredBlock<ButtonBlock> MAPLE_BUTTON = registerBlock("maple_button",
+            () -> new ButtonBlock(BlockSetType.OAK, 30, BlockBehaviour.Properties.of().strength(0.5f)
+                    .noCollission()));
+    public static final DeferredBlock<FenceBlock> MAPLE_FENCE = registerBlock("maple_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.of().strength(2f)));
+    public static final DeferredBlock<FenceGateBlock> MAPLE_FENCE_GATE = registerBlock("maple_fence_gate",
+            () -> new FenceGateBlock(WoodType.OAK, BlockBehaviour.Properties.of().strength(2f)));
+    public static final DeferredBlock<DoorBlock> MAPLE_DOOR = registerBlock("maple_door",
+            () -> new DoorBlock(BlockSetType.OAK, BlockBehaviour.Properties.of().strength(3f).noOcclusion()));
+    public static final DeferredBlock<TrapDoorBlock> MAPLE_TRAPDOOR = registerBlock("maple_trapdoor",
+            () -> new TrapDoorBlock(BlockSetType.OAK, BlockBehaviour.Properties.of().strength(3f).noOcclusion()));
     public static final DeferredBlock<Block> CHORUS_PLANKS = registerBlock("chorus_planks",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_PLANKS)) {
                 @Override
@@ -58,6 +78,24 @@ public class ModBlocks {
                     return false;
                 }
             });
+    public static final DeferredBlock<StairBlock> CHORUS_STAIRS = registerBlock("chorus_stairs",
+            () -> new StairBlock(ModBlocks.CHORUS_PLANKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.of().strength(2f)));
+    public static final DeferredBlock<SlabBlock> CHORUS_SLAB = registerBlock("chorus_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of().strength(2f)));
+    public static final DeferredBlock<PressurePlateBlock> CHORUS_PRESSURE_PLATE = registerBlock("chorus_pressure_plate",
+            () -> new PressurePlateBlock(BlockSetType.WARPED, BlockBehaviour.Properties.of().strength(0.5f)));
+    public static final DeferredBlock<ButtonBlock> CHORUS_BUTTON = registerBlock("chorus_button",
+            () -> new ButtonBlock(BlockSetType.WARPED, 30, BlockBehaviour.Properties.of().strength(0.5f)
+                    .noCollission()));
+    public static final DeferredBlock<FenceBlock> CHORUS_FENCE = registerBlock("chorus_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.of().strength(2f)));
+    public static final DeferredBlock<FenceGateBlock> CHORUS_FENCE_GATE = registerBlock("chorus_fence_gate",
+            () -> new FenceGateBlock(WoodType.WARPED, BlockBehaviour.Properties.of().strength(2f)));
+    public static final DeferredBlock<DoorBlock> CHORUS_DOOR = registerBlock("chorus_door",
+            () -> new DoorBlock(BlockSetType.WARPED, BlockBehaviour.Properties.of().strength(3f).noOcclusion()));
+    public static final DeferredBlock<TrapDoorBlock> CHORUS_TRAPDOOR = registerBlock("chorus_trapdoor",
+            () -> new TrapDoorBlock(BlockSetType.WARPED, BlockBehaviour.Properties.of().strength(3f).noOcclusion()));
     public static final DeferredBlock<Block> PALE_CHORUS_PLANKS = registerBlock("pale_chorus_planks",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_PLANKS)) {
                 @Override
@@ -65,6 +103,24 @@ public class ModBlocks {
                     return false;
                 }
             });
+    public static final DeferredBlock<StairBlock> PALE_CHORUS_STAIRS = registerBlock("pale_chorus_stairs",
+            () -> new StairBlock(ModBlocks.PALE_CHORUS_PLANKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.of().strength(2f)));
+    public static final DeferredBlock<SlabBlock> PALE_CHORUS_SLAB = registerBlock("pale_chorus_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of().strength(2f)));
+    public static final DeferredBlock<PressurePlateBlock> PALE_CHORUS_PRESSURE_PLATE = registerBlock("pale_chorus_pressure_plate",
+            () -> new PressurePlateBlock(BlockSetType.WARPED, BlockBehaviour.Properties.of().strength(0.5f)));
+    public static final DeferredBlock<ButtonBlock> PALE_CHORUS_BUTTON = registerBlock("pale_chorus_button",
+            () -> new ButtonBlock(BlockSetType.WARPED, 30, BlockBehaviour.Properties.of().strength(0.5f)
+                    .noCollission()));
+    public static final DeferredBlock<FenceBlock> PALE_CHORUS_FENCE = registerBlock("pale_chorus_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.of().strength(2f)));
+    public static final DeferredBlock<FenceGateBlock> PALE_CHORUS_FENCE_GATE = registerBlock("pale_chorus_fence_gate",
+            () -> new FenceGateBlock(WoodType.WARPED, BlockBehaviour.Properties.of().strength(2f)));
+    public static final DeferredBlock<DoorBlock> PALE_CHORUS_DOOR = registerBlock("pale_chorus_door",
+            () -> new DoorBlock(BlockSetType.WARPED, BlockBehaviour.Properties.of().strength(3f).noOcclusion()));
+    public static final DeferredBlock<TrapDoorBlock> PALE_CHORUS_TRAPDOOR = registerBlock("pale_chorus_trapdoor",
+            () -> new TrapDoorBlock(BlockSetType.WARPED, BlockBehaviour.Properties.of().strength(3f).noOcclusion()));
 
     public static final DeferredBlock<Block> KROIPNITE_ORE = registerBlock("kroipnite_ore",
             () -> new DropExperienceBlock(UniformInt.of(2,4), BlockBehaviour.Properties.of()

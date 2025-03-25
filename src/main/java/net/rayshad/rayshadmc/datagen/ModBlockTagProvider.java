@@ -55,6 +55,13 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.SOUL_SPEED_BLOCKS)
                 .add(ModBlocks.OPYX_SOIL.get());
 
+        tag(BlockTags.WOODEN_FENCES).add(ModBlocks.MAPLE_FENCE.get());
+        tag(BlockTags.WOODEN_FENCES).add(ModBlocks.CHORUS_FENCE.get());
+        tag(BlockTags.WOODEN_FENCES).add(ModBlocks.PALE_CHORUS_FENCE.get());
+        tag(BlockTags.FENCE_GATES).add(ModBlocks.MAPLE_FENCE_GATE.get());
+        tag(BlockTags.FENCE_GATES).add(ModBlocks.CHORUS_FENCE_GATE.get());
+        tag(BlockTags.FENCE_GATES).add(ModBlocks.PALE_CHORUS_FENCE_GATE.get());
+
         this.tag(BlockTags.LOGS_THAT_BURN)
                 .add(ModBlocks.MAPLE_LOG.get())
                 .add(ModBlocks.MAPLE_WOOD.get())
