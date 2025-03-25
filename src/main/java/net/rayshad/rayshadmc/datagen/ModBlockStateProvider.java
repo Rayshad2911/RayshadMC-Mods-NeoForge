@@ -116,7 +116,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         signBlock(((StandingSignBlock) ModBlocks.PALE_CHORUS_SIGN.get()), ((WallSignBlock) ModBlocks.PALE_CHORUS_WALL_SIGN.get()),
                 blockTexture(ModBlocks.PALE_CHORUS_PLANKS.get()));
 
-        hangingSignBlock(ModBlocks.MAPLE_HANGING_SIGN.get(), ModBlocks.MAPLE_WALL_HANGING_SIGN.get(), blockTexture(ModBlocks.MAPLE_PLANKS.get()));
+        hangingSignBlock(ModBlocks.MAPLE_HANGING_SIGN.get(), ModBlocks.MAPLE_WALL_HANGING_SIGN.get(), blockTexture(ModBlocks.STRIPPED_MAPLE_LOG.get()));
     }
 
     public void hangingSignBlock(Block signBlock, Block wallSignBlock, ResourceLocation texture) {
