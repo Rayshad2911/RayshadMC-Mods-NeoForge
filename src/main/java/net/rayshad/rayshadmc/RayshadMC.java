@@ -54,6 +54,17 @@ public class RayshadMC {
         }
 
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.MAPLE_LOG);
+            event.accept(ModBlocks.CHORUS_STEM);
+            event.accept(ModBlocks.MAPLE_WOOD);
+            event.accept(ModBlocks.CHORUS_HYPHAE);
+            event.accept(ModBlocks.STRIPPED_MAPLE_LOG);
+            event.accept(ModBlocks.PALE_CHORUS_STEM);
+            event.accept(ModBlocks.STRIPPED_MAPLE_WOOD);
+            event.accept(ModBlocks.PALE_CHORUS_HYPHAE);
+            event.accept(ModBlocks.MAPLE_PLANKS);
+            event.accept(ModBlocks.CHORUS_PLANKS);
+            event.accept(ModBlocks.PALE_CHORUS_PLANKS);
             event.accept(ModBlocks.KROIPNITE_BLOCK);
             event.accept(ModBlocks.OPYX_BLOCK);
             event.accept(ModBlocks.OPYX_HARDENED_BLOCK);
@@ -63,6 +74,13 @@ public class RayshadMC {
             event.accept(ModBlocks.KROIPNITE_ORE);
             event.accept(ModBlocks.DEEPSLATE_KROIPNITE_ORE);
             event.accept(ModBlocks.OPYX_SOIL);
+            event.accept(ModBlocks.MAPLE_LOG);
+            event.accept(ModBlocks.CHORUS_STEM);
+            event.accept(ModBlocks.MAPLE_LEAVES);
+            event.accept(ModBlocks.CHORUS_LEAVES);
+            event.accept(ModBlocks.MAPLE_SAPLING);
+            event.accept(ModBlocks.CHORUS_TREE_SEED);
+            event.accept(ModBlocks.PALE_CHORUS_TREE_SEED);
             event.accept(ModItems.CORN_SEEDS);
         }
 

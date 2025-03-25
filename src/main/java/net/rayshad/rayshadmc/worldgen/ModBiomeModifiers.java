@@ -17,6 +17,9 @@ public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_KROIPNITE_ORE = registerKey("add_kroipnite_ore");
     public static final ResourceKey<BiomeModifier> ADD_OPYX_SOIL = registerKey("add_opyx_soil");
 
+    public static final ResourceKey<BiomeModifier> ADD_MAPLE_TREE = registerKey("add_tree_maple");
+    public static final ResourceKey<BiomeModifier> ADD_CHORUS_TREE = registerKey("add_tree_chorus");
+
     public static void bootstrap(BootstrapContext<BiomeModifier> context) {
         var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
         var biomes = context.lookup(Registries.BIOME);
@@ -30,6 +33,16 @@ public class ModBiomeModifiers {
                 HolderSet.direct(biomes.getOrThrow(Biomes.SOUL_SAND_VALLEY)),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.NETHER_OPYX_SOIL_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
+
+        context.register(ADD_MAPLE_TREE, new BiomeModifiers.AddFeaturesBiomeModifier(
+                HolderSet.direct(biomes.getOrThrow(Biomes.PLAINS)),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.MAPLE_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+
+        context.register(ADD_CHORUS_TREE, new BiomeModifiers.AddFeaturesBiomeModifier(
+                HolderSet.direct(biomes.getOrThrow(Biomes.SMALL_END_ISLANDS)),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.CHORUS_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
     }
 
     private static ResourceKey<BiomeModifier> registerKey(String name) {

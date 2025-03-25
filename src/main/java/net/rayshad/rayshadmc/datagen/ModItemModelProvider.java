@@ -8,12 +8,15 @@ import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.armortrim.TrimMaterial;
 import net.minecraft.world.item.armortrim.TrimMaterials;
+import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.client.model.generators.ItemModelBuilder;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.rayshad.rayshadmc.RayshadMC;
+import net.rayshad.rayshadmc.block.ModBlocks;
 import net.rayshad.rayshadmc.item.ModItems;
 
 import java.util.LinkedHashMap;
@@ -63,6 +66,16 @@ public class ModItemModelProvider extends ItemModelProvider {
         trimmedArmorItem(ModItems.KROIPNITE_CHESTPLATE);
         trimmedArmorItem(ModItems.KROIPNITE_LEGGINGS);
         trimmedArmorItem(ModItems.KROIPNITE_BOOTS);
+
+        saplingItem(ModBlocks.MAPLE_SAPLING);
+        saplingItem(ModBlocks.CHORUS_TREE_SEED);
+        saplingItem(ModBlocks.PALE_CHORUS_TREE_SEED);
+    }
+
+    private ItemModelBuilder saplingItem(DeferredBlock<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                ResourceLocation.parse("item/generated")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath(RayshadMC.MOD_ID, "block/" + item.getId().getPath()));
     }
 
     private void trimmedArmorItem(DeferredItem<ArmorItem> itemDeferredItem) {

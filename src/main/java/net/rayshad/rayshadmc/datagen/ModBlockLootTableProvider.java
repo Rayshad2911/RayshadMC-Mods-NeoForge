@@ -45,6 +45,28 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                 .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CornCropBlock.AGE, CornCropBlock.MAX_AGE));
         this.add(ModBlocks.CORN_CROP.get(), this.createCropDrops(ModBlocks.CORN_CROP.get(),
                 ModItems.CORN.get(), ModItems.CORN_SEEDS.get(), lootItemConditionBuilder));
+
+        this.dropSelf(ModBlocks.MAPLE_LOG.get());
+        this.dropSelf(ModBlocks.MAPLE_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_MAPLE_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_MAPLE_WOOD.get());
+        this.dropSelf(ModBlocks.MAPLE_PLANKS.get());
+        this.dropSelf(ModBlocks.MAPLE_SAPLING.get());
+
+        this.dropSelf(ModBlocks.CHORUS_STEM.get());
+        this.dropSelf(ModBlocks.CHORUS_HYPHAE.get());
+        this.dropSelf(ModBlocks.PALE_CHORUS_STEM.get());
+        this.dropSelf(ModBlocks.PALE_CHORUS_HYPHAE.get());
+        this.dropSelf(ModBlocks.CHORUS_PLANKS.get());
+        this.dropSelf(ModBlocks.PALE_CHORUS_PLANKS.get());
+        this.dropSelf(ModBlocks.CHORUS_TREE_SEED.get());
+        this.dropSelf(ModBlocks.PALE_CHORUS_TREE_SEED.get());
+
+        this.add(ModBlocks.MAPLE_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.MAPLE_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+
+        this.add(ModBlocks.CHORUS_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.PALE_CHORUS_TREE_SEED.get(), NORMAL_LEAVES_SAPLING_CHANCES));
     }
 
     protected LootTable.Builder createMultipleOreDrops(Block pBlock, Item item, float minDrops, float maxDrops) {

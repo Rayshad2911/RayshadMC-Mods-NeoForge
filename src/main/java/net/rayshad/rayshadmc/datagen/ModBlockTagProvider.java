@@ -36,6 +36,13 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.KROIPNITE_ORE.get())
                 .add(ModBlocks.DEEPSLATE_KROIPNITE_ORE.get());
 
+        tag(ModTags.Blocks.NEEDS_KROIPNITE_TOOL)
+                .addTag(BlockTags.NEEDS_DIAMOND_TOOL);
+
+        tag(ModTags.Blocks.INCORRECT_FOR_KROIPNITE_TOOL)
+                .addTag(BlockTags.INCORRECT_FOR_DIAMOND_TOOL)
+                .remove(ModTags.Blocks.NEEDS_KROIPNITE_TOOL);
+
         tag(BlockTags.MINEABLE_WITH_SHOVEL)
                 .add(ModBlocks.OPYX_SOIL.get());
 
@@ -48,11 +55,10 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.SOUL_SPEED_BLOCKS)
                 .add(ModBlocks.OPYX_SOIL.get());
 
-        tag(ModTags.Blocks.NEEDS_KROIPNITE_TOOL)
-                .addTag(BlockTags.NEEDS_DIAMOND_TOOL);
-
-        tag(ModTags.Blocks.INCORRECT_FOR_KROIPNITE_TOOL)
-                .addTag(BlockTags.INCORRECT_FOR_DIAMOND_TOOL)
-                .remove(ModTags.Blocks.NEEDS_KROIPNITE_TOOL);
+        this.tag(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.MAPLE_LOG.get())
+                .add(ModBlocks.MAPLE_WOOD.get())
+                .add(ModBlocks.STRIPPED_MAPLE_LOG.get())
+                .add(ModBlocks.STRIPPED_MAPLE_WOOD.get());
     }
 }

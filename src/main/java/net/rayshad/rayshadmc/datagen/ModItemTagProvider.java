@@ -7,6 +7,7 @@ import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.rayshad.rayshadmc.RayshadMC;
+import net.rayshad.rayshadmc.block.ModBlocks;
 import net.rayshad.rayshadmc.item.ModItems;
 import org.jetbrains.annotations.Nullable;
 
@@ -36,5 +37,16 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModItems.KROIPNITE_CHESTPLATE.get())
                 .add(ModItems.KROIPNITE_LEGGINGS.get())
                 .add(ModItems.KROIPNITE_BOOTS.get());
+
+        this.tag(ItemTags.LOGS_THAT_BURN)
+                .add(ModBlocks.MAPLE_LOG.get().asItem())
+                .add(ModBlocks.MAPLE_WOOD.get().asItem())
+                .add(ModBlocks.STRIPPED_MAPLE_LOG.get().asItem())
+                .add(ModBlocks.STRIPPED_MAPLE_WOOD.get().asItem());
+
+        tag(ItemTags.PLANKS)
+                .add(ModBlocks.MAPLE_PLANKS.get().asItem())
+                .add(ModBlocks.CHORUS_PLANKS.get().asItem())
+                .add(ModBlocks.PALE_CHORUS_PLANKS.get().asItem());
     }
 }
