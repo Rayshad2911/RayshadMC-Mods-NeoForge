@@ -22,6 +22,7 @@ import net.rayshad.rayshadmc.block.entity.ModBlockEntities;
 import net.rayshad.rayshadmc.effect.ModEffects;
 import net.rayshad.rayshadmc.entity.ModEntities;
 import net.rayshad.rayshadmc.item.ModItems;
+import net.rayshad.rayshadmc.loot.ModLootModifiers;
 import net.rayshad.rayshadmc.potion.ModPotions;
 import net.rayshad.rayshadmc.sound.ModSounds;
 import net.rayshad.rayshadmc.util.ModWoodTypes;
@@ -41,6 +42,7 @@ public class RayshadMC {
         ModEffects.register(modEventBus);
         ModEntities.register(modEventBus);
         ModItems.register(modEventBus);
+        ModLootModifiers.register(modEventBus);
         ModPotions.register(modEventBus);
         ModSounds.register(modEventBus);
 
@@ -140,6 +142,13 @@ public class RayshadMC {
         if(event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
             event.accept(ModItems.CORN);
             event.accept(ModItems.MASHED_POTATO);
+        }
+
+        if(event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
+            event.accept(ModBlocks.MAPLE_SIGN);
+            event.accept(ModBlocks.CHORUS_SIGN);
+            event.accept(ModBlocks.PALE_CHORUS_SIGN);
+            event.accept(ModBlocks.MAPLE_HANGING_SIGN);
         }
     }
 
