@@ -49,6 +49,8 @@
   "block.rayshadmc.maple_fence_gate": "Maple Fence Gate",
   "block.rayshadmc.maple_pressure_plate": "Maple Pressure Plate",
   "block.rayshadmc.maple_button": "Maple Button",
+  "block.rayshadmc.maple_sign": "Maple Sign",
+  "block.rayshadmc.maple_hanging_sign": "Maple Hanging Sign",
   "block.rayshadmc.chorus_stem": "Chorus Stem",
   "block.rayshadmc.chorus_hyphae": "Chorus Hyphae",
   "block.rayshadmc.pale_chorus_stem": "Pale Chorus Stem",
@@ -65,6 +67,7 @@
   "block.rayshadmc.chorus_fence_gate": "Chorus Fence Gate",
   "block.rayshadmc.chorus_pressure_plate": "Chorus Pressure Plate",
   "block.rayshadmc.chorus_button": "Chorus Button",
+  "block.rayshadmc.chorus_sign": "Chorus Sign",
   "block.rayshadmc.pale_chorus_planks": "Pale Chorus Planks",
   "block.rayshadmc.pale_chorus_stairs": "Pale Chorus Stairs",
   "block.rayshadmc.pale_chorus_slab": "Pale Chorus Slab",
@@ -74,6 +77,7 @@
   "block.rayshadmc.pale_chorus_fence_gate": "Pale Chorus Fence Gate",
   "block.rayshadmc.pale_chorus_pressure_plate": "Pale Chorus Pressure Plate",
   "block.rayshadmc.pale_chorus_button": "Pale Chorus Button",
+  "block.rayshadmc.pale_chorus_sign": "Pale Chorus Sign",
 
   "effect.rayshadmc.decay": "Decay",
 

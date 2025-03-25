@@ -100,6 +100,26 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.PALE_CHORUS_TRAPDOOR.get());
         dropSelf(ModBlocks.PALE_CHORUS_PRESSURE_PLATE.get());
         dropSelf(ModBlocks.PALE_CHORUS_BUTTON.get());
+
+        this.add(ModBlocks.MAPLE_SIGN.get(), block ->
+                createSingleItemTable(ModItems.MAPLE_SIGN.get()));
+        this.add(ModBlocks.MAPLE_WALL_SIGN.get(), block ->
+                createSingleItemTable(ModItems.MAPLE_SIGN.get()));
+
+        this.add(ModBlocks.MAPLE_HANGING_SIGN.get(), block ->
+                createSingleItemTable(ModItems.MAPLE_HANGING_SIGN.get()));
+        this.add(ModBlocks.MAPLE_WALL_HANGING_SIGN.get(), block ->
+                createSingleItemTable(ModItems.MAPLE_HANGING_SIGN.get()));
+
+        this.add(ModBlocks.CHORUS_SIGN.get(), block ->
+                createSingleItemTable(ModItems.CHORUS_SIGN.get()));
+        this.add(ModBlocks.CHORUS_WALL_SIGN.get(), block ->
+                createSingleItemTable(ModItems.CHORUS_SIGN.get()));
+
+        this.add(ModBlocks.PALE_CHORUS_SIGN.get(), block ->
+                createSingleItemTable(ModItems.PALE_CHORUS_SIGN.get()));
+        this.add(ModBlocks.PALE_CHORUS_WALL_SIGN.get(), block ->
+                createSingleItemTable(ModItems.PALE_CHORUS_SIGN.get()));
     }
 
     protected LootTable.Builder createMultipleOreDrops(Block pBlock, Item item, float minDrops, float maxDrops) {

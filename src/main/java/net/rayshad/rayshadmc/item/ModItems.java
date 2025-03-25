@@ -63,6 +63,15 @@ public class ModItems {
     public static final DeferredItem<Item> MUSIC_DISC_PLAYING_ARCADE_GAME = ITEMS.register("music_disc_playing_arcade_game",
             () -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.PLAYING_ARCADE_GAME_KEY).stacksTo(1)));
 
+    public static final DeferredItem<SignItem> MAPLE_SIGN = ITEMS.register("maple_sign",
+            () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.MAPLE_SIGN.get(), ModBlocks.MAPLE_WALL_SIGN.get()));
+    public static final DeferredItem<SignItem> CHORUS_SIGN = ITEMS.register("chorus_sign",
+            () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.CHORUS_SIGN.get(), ModBlocks.CHORUS_WALL_SIGN.get()));
+    public static final DeferredItem<SignItem> PALE_CHORUS_SIGN = ITEMS.register("pale_chorus_sign",
+            () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.PALE_CHORUS_SIGN.get(), ModBlocks.PALE_CHORUS_WALL_SIGN.get()));
+    public static final DeferredItem<HangingSignItem> MAPLE_HANGING_SIGN = ITEMS.register("maple_hanging_sign",
+            () -> new HangingSignItem(ModBlocks.MAPLE_HANGING_SIGN.get(), ModBlocks.MAPLE_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
+
     public static final DeferredItem<Item> AMETHYST_GRENADE = ITEMS.register("amethyst_grenade",
             () -> new AmethystGrenade(new Item.Properties().stacksTo(16)));
     public static final DeferredItem<Item> ZOMBIE_EYE = ITEMS.register("zombie_eye",

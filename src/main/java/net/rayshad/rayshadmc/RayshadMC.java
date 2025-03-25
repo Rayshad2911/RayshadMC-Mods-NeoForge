@@ -1,6 +1,7 @@
 package net.rayshad.rayshadmc;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -17,11 +18,13 @@ import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import net.rayshad.rayshadmc.block.ModBlocks;
+import net.rayshad.rayshadmc.block.entity.ModBlockEntities;
 import net.rayshad.rayshadmc.effect.ModEffects;
 import net.rayshad.rayshadmc.entity.ModEntities;
 import net.rayshad.rayshadmc.item.ModItems;
 import net.rayshad.rayshadmc.potion.ModPotions;
 import net.rayshad.rayshadmc.sound.ModSounds;
+import net.rayshad.rayshadmc.util.ModWoodTypes;
 import org.slf4j.Logger;
 
 @Mod(RayshadMC.MOD_ID)
@@ -34,6 +37,7 @@ public class RayshadMC {
         NeoForge.EVENT_BUS.register(this);
 
         ModBlocks.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
         ModEffects.register(modEventBus);
         ModEntities.register(modEventBus);
         ModItems.register(modEventBus);
@@ -148,6 +152,10 @@ public class RayshadMC {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+            Sheets.addWoodType(ModWoodTypes.MAPLE);
+            Sheets.addWoodType(ModWoodTypes.CHORUS);
+            Sheets.addWoodType(ModWoodTypes.PALE_CHORUS);
+
             EntityRenderers.register(ModEntities.AMETHYST_GRENADE.get(), ThrownItemRenderer::new);
         }
     }

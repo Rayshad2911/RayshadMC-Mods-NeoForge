@@ -46,6 +46,47 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.MINEABLE_WITH_SHOVEL)
                 .add(ModBlocks.OPYX_SOIL.get());
 
+        tag(BlockTags.MINEABLE_WITH_AXE)
+                .add(ModBlocks.MAPLE_LOG.get())
+                .add(ModBlocks.MAPLE_WOOD.get())
+                .add(ModBlocks.STRIPPED_MAPLE_LOG.get())
+                .add(ModBlocks.STRIPPED_MAPLE_WOOD.get())
+                .add(ModBlocks.MAPLE_PLANKS.get())
+                .add(ModBlocks.MAPLE_STAIRS.get())
+                .add(ModBlocks.MAPLE_SLAB.get())
+                .add(ModBlocks.MAPLE_FENCE.get())
+                .add(ModBlocks.MAPLE_FENCE_GATE.get())
+                .add(ModBlocks.MAPLE_DOOR.get())
+                .add(ModBlocks.MAPLE_TRAPDOOR.get())
+                .add(ModBlocks.MAPLE_PRESSURE_PLATE.get())
+                .add(ModBlocks.MAPLE_BUTTON.get())
+                .add(ModBlocks.MAPLE_SIGN.get())
+                .add(ModBlocks.MAPLE_HANGING_SIGN.get())
+                .add(ModBlocks.CHORUS_STEM.get())
+                .add(ModBlocks.CHORUS_HYPHAE.get())
+                .add(ModBlocks.CHORUS_PLANKS.get())
+                .add(ModBlocks.CHORUS_STAIRS.get())
+                .add(ModBlocks.CHORUS_SLAB.get())
+                .add(ModBlocks.CHORUS_FENCE.get())
+                .add(ModBlocks.CHORUS_FENCE_GATE.get())
+                .add(ModBlocks.CHORUS_DOOR.get())
+                .add(ModBlocks.CHORUS_TRAPDOOR.get())
+                .add(ModBlocks.CHORUS_PRESSURE_PLATE.get())
+                .add(ModBlocks.CHORUS_BUTTON.get())
+                .add(ModBlocks.CHORUS_SIGN.get())
+                .add(ModBlocks.PALE_CHORUS_STEM.get())
+                .add(ModBlocks.PALE_CHORUS_HYPHAE.get())
+                .add(ModBlocks.PALE_CHORUS_PLANKS.get())
+                .add(ModBlocks.PALE_CHORUS_STAIRS.get())
+                .add(ModBlocks.PALE_CHORUS_SLAB.get())
+                .add(ModBlocks.PALE_CHORUS_FENCE.get())
+                .add(ModBlocks.PALE_CHORUS_FENCE_GATE.get())
+                .add(ModBlocks.PALE_CHORUS_DOOR.get())
+                .add(ModBlocks.PALE_CHORUS_TRAPDOOR.get())
+                .add(ModBlocks.PALE_CHORUS_PRESSURE_PLATE.get())
+                .add(ModBlocks.PALE_CHORUS_BUTTON.get())
+                .add(ModBlocks.PALE_CHORUS_SIGN.get());
+
         tag(BlockTags.SOUL_FIRE_BASE_BLOCKS)
                 .add(ModBlocks.OPYX_SOIL.get());
 
@@ -67,5 +108,18 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.MAPLE_WOOD.get())
                 .add(ModBlocks.STRIPPED_MAPLE_LOG.get())
                 .add(ModBlocks.STRIPPED_MAPLE_WOOD.get());
+
+        tag(BlockTags.WALL_POST_OVERRIDE)
+                .add(ModBlocks.MAPLE_SIGN.get())
+                .add(ModBlocks.CHORUS_SIGN.get())
+                .add(ModBlocks.PALE_CHORUS_SIGN.get());
+
+        tag(BlockTags.ALL_SIGNS)
+                .add(ModBlocks.MAPLE_SIGN.get())
+                .add(ModBlocks.MAPLE_WALL_SIGN.get())
+                .add(ModBlocks.CHORUS_SIGN.get())
+                .add(ModBlocks.CHORUS_WALL_SIGN.get())
+                .add(ModBlocks.PALE_CHORUS_SIGN.get())
+                .add(ModBlocks.PALE_CHORUS_WALL_SIGN.get());
     }
 }

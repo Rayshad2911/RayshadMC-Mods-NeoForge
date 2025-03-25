@@ -15,10 +15,9 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.rayshad.rayshadmc.RayshadMC;
-import net.rayshad.rayshadmc.block.custom.CornCropBlock;
-import net.rayshad.rayshadmc.block.custom.ModFlammableRotatedPillarBlock;
-import net.rayshad.rayshadmc.block.custom.ModSaplingBlock;
+import net.rayshad.rayshadmc.block.custom.*;
 import net.rayshad.rayshadmc.item.ModItems;
+import net.rayshad.rayshadmc.util.ModWoodTypes;
 import net.rayshad.rayshadmc.worldgen.tree.ModTreeGrowers;
 
 import java.util.function.Supplier;
@@ -192,6 +191,26 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> CORN_CROP = BLOCKS.register("corn_crop",
             () -> new CornCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT)));
+
+    public static final DeferredBlock<Block> MAPLE_SIGN = BLOCKS.register("maple_sign",
+            () -> new ModStandingSignBlock(ModWoodTypes.MAPLE, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SIGN)));
+    public static final DeferredBlock<Block> MAPLE_WALL_SIGN = BLOCKS.register("maple_wall_sign",
+            () -> new ModWallSignBlock(ModWoodTypes.MAPLE, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WALL_SIGN)));
+
+    public static final DeferredBlock<Block> MAPLE_HANGING_SIGN = BLOCKS.register("maple_hanging_sign",
+            () -> new ModHangingSignBlock(ModWoodTypes.MAPLE, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_HANGING_SIGN)));
+    public static final DeferredBlock<Block> MAPLE_WALL_HANGING_SIGN = BLOCKS.register("maple_wall_hanging_sign",
+            () -> new ModWallHangingSignBlock(ModWoodTypes.MAPLE, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WALL_HANGING_SIGN)));
+
+    public static final DeferredBlock<Block> CHORUS_SIGN = BLOCKS.register("chorus_sign",
+            () -> new ModStandingSignBlock(ModWoodTypes.CHORUS, BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_SIGN)));
+    public static final DeferredBlock<Block> CHORUS_WALL_SIGN = BLOCKS.register("chorus_wall_sign",
+            () -> new ModWallSignBlock(ModWoodTypes.CHORUS, BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_WALL_SIGN)));
+
+    public static final DeferredBlock<Block> PALE_CHORUS_SIGN = BLOCKS.register("pale_chorus_sign",
+            () -> new ModStandingSignBlock(ModWoodTypes.PALE_CHORUS, BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_SIGN)));
+    public static final DeferredBlock<Block> PALE_CHORUS_WALL_SIGN = BLOCKS.register("pale_chorus_wall_sign",
+            () -> new ModWallSignBlock(ModWoodTypes.PALE_CHORUS, BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_WALL_SIGN)));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);

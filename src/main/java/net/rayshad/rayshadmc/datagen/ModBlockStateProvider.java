@@ -3,9 +3,7 @@ package net.rayshad.rayshadmc.datagen;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.CropBlock;
-import net.minecraft.world.level.block.RotatedPillarBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
@@ -110,6 +108,33 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.PALE_CHORUS_PRESSURE_PLATE);
         blockItem(ModBlocks.PALE_CHORUS_FENCE_GATE);
         blockItem(ModBlocks.PALE_CHORUS_TRAPDOOR, "_bottom");
+
+        signBlock(((StandingSignBlock) ModBlocks.MAPLE_SIGN.get()), ((WallSignBlock) ModBlocks.MAPLE_WALL_SIGN.get()),
+                blockTexture(ModBlocks.MAPLE_PLANKS.get()));
+        signBlock(((StandingSignBlock) ModBlocks.CHORUS_SIGN.get()), ((WallSignBlock) ModBlocks.CHORUS_WALL_SIGN.get()),
+                blockTexture(ModBlocks.CHORUS_PLANKS.get()));
+        signBlock(((StandingSignBlock) ModBlocks.PALE_CHORUS_SIGN.get()), ((WallSignBlock) ModBlocks.PALE_CHORUS_WALL_SIGN.get()),
+                blockTexture(ModBlocks.PALE_CHORUS_PLANKS.get()));
+
+        hangingSignBlock(ModBlocks.MAPLE_HANGING_SIGN.get(), ModBlocks.MAPLE_WALL_HANGING_SIGN.get(), blockTexture(ModBlocks.MAPLE_PLANKS.get()));
+    }
+
+    public void hangingSignBlock(Block signBlock, Block wallSignBlock, ResourceLocation texture) {
+        ModelFile sign = models().sign(name(signBlock), texture);
+        hangingSignBlock(signBlock, wallSignBlock, sign);
+    }
+
+    public void hangingSignBlock(Block signBlock, Block wallSignBlock, ModelFile sign) {
+        simpleBlock(signBlock, sign);
+        simpleBlock(wallSignBlock, sign);
+    }
+
+    private String name(Block block) {
+        return key(block).getPath();
+    }
+
+    private ResourceLocation key(Block block) {
+        return BuiltInRegistries.BLOCK.getKey(block);
     }
 
     private void saplingBlock(DeferredBlock<Block> blockRegistryObject) {

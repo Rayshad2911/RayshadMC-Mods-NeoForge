@@ -80,6 +80,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModBlocks.MAPLE_DOOR.asItem());
         basicItem(ModBlocks.CHORUS_DOOR.asItem());
         basicItem(ModBlocks.PALE_CHORUS_DOOR.asItem());
+        basicItem(ModItems.MAPLE_SIGN.get());
+        basicItem(ModItems.CHORUS_SIGN.get());
+        basicItem(ModItems.PALE_CHORUS_SIGN.get());
+        basicItem(ModItems.MAPLE_HANGING_SIGN.get());
 
         basicItem(ModItems.AMETHYST_GRENADE.asItem());
     }
