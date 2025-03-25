@@ -39,6 +39,9 @@ Problems That Intended to Fix or Not:
 ---
 **RayshadMC 1.0.1 - Minecraft: Java Edition 1.21.1 NeoForge 21.1.42**
 
+Fixes:
+- In 1.0.0, editing the hanging sign showing sign GUI instead of hanging sign GUI. This has been fixed.
+
 Changes:
 - ModLoader migration from Forge to NeoForge for better development.
 - Shortener code line. Now mod tag "needs_kroipnite_tool.json" is equal to the diamond one.
