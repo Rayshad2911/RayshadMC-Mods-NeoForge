@@ -6,7 +6,7 @@ RayshadMC Mod Changelog
 
 Blocks and Items:
 - New 51 blocks.
-- New 18 items.
+- New 24 items.
 - Add two foods.
 - New three types of wood and their lineup.
 - Amethyst Grenade.
@@ -22,8 +22,10 @@ World Generation:
 Event and Mechanism:
 - New Kroipnite tool tiers are between Diamond and Netherite.
 - New Kroipnite armor materials are between Diamond and Netherite.
-- New Decay Health effect costs -80% Max Health of any entities.
+- New Decay Health effect costs -80% Max Health of entities.
 - New Villagers Trades for Farmer and Wandering Traders.
+- New! Any zombie type has a chance to drop a new item, Zombie Eye.
+- New potion brew by using Zombie Eye on the Brewing Stand.
 - Right-clicking on Chorus Stem will convert to Pale Chorus Stem.
 
 Advancements:
@@ -41,11 +43,14 @@ Problems That Intended to Fix or Not:
 
 Fixes:
 - In 1.0.0, editing the hanging sign showing sign GUI instead of hanging sign GUI. This has been fixed.
+- In 1.0.0, a recipe for any mod planks only occurs to the single block (tree log item only). This has been fixed by setting the recipe required by using mod tags.
+
 
 Changes:
 - ModLoader migration from Forge to NeoForge for better development.
 - Shortener code line. Now mod tag "needs_kroipnite_tool.json" is equal to the diamond one.
 - Pale Chorus is not counted as a world generation tree. So, the requirement advancement is removed from "Around the Wood".
+- Change the recipe required for any mod planks from a single item to a mod tag item.
 
 Removal:
 - Crimson Bush generation and its item are wholly removed from the mod.

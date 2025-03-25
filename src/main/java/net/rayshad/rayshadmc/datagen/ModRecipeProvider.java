@@ -11,6 +11,7 @@ import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 import net.rayshad.rayshadmc.RayshadMC;
 import net.rayshad.rayshadmc.block.ModBlocks;
 import net.rayshad.rayshadmc.item.ModItems;
+import net.rayshad.rayshadmc.util.ModTags;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -167,14 +168,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModBlocks.KROIPNITE_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.KROIPNITE_BLOCK.get()), has(ModBlocks.KROIPNITE_BLOCK.get())).save(recipeOutput);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAPLE_PLANKS.get(), 4)
-                .requires(ModBlocks.MAPLE_LOG.get())
-                .unlockedBy(getHasName(ModBlocks.MAPLE_LOG.get()), has(ModBlocks.MAPLE_LOG.get())).save(recipeOutput);
+                .requires(ModTags.Items.MAPLE_LOGS)
+                .unlockedBy(getHasName(ModBlocks.MAPLE_LOG.get()), has(ModTags.Items.MAPLE_LOGS))
+                .group("planks").save(recipeOutput);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHORUS_PLANKS.get(), 4)
-                .requires(ModBlocks.CHORUS_STEM.get())
-                .unlockedBy(getHasName(ModBlocks.CHORUS_STEM.get()), has(ModBlocks.CHORUS_STEM.get())).save(recipeOutput);
+                .requires(ModTags.Items.CHORUS_STEMS)
+                .unlockedBy(getHasName(ModBlocks.CHORUS_STEM.get()), has(ModTags.Items.CHORUS_STEMS))
+                .group("planks").save(recipeOutput);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PALE_CHORUS_PLANKS.get(), 4)
-                .requires(ModBlocks.PALE_CHORUS_STEM.get())
-                .unlockedBy(getHasName(ModBlocks.PALE_CHORUS_STEM.get()), has(ModBlocks.PALE_CHORUS_STEM.get())).save(recipeOutput);
+                .requires(ModTags.Items.PALE_CHORUS_STEMS)
+                .unlockedBy(getHasName(ModBlocks.PALE_CHORUS_STEM.get()), has(ModTags.Items.PALE_CHORUS_STEMS))
+                .group("planks").save(recipeOutput);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.MASHED_POTATO.get())
                 .requires(Items.BOWL)
                 .requires(Items.MILK_BUCKET)
