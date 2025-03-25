@@ -42,7 +42,7 @@ Problems That Intended to Fix or Not:
 Changes:
 - ModLoader migration from Forge to NeoForge for better development.
 - Shortener code line. Now mod tag "needs_kroipnite_tool.json" is equal to the diamond one.
-- Pale Chorus Planks is not counted as a world generation tree. So, the requirement advancement is removed from "Around the Wood".
+- Pale Chorus is not counted as a world generation tree. So, the requirement advancement is removed from "Around the Wood".
 
 Removal:
 - Crimson Bush generation and its item are wholly removed from the mod.
